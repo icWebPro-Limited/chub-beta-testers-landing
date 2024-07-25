@@ -1,0 +1,43 @@
+#footer-layer {
+	background-image: url(/src/assets/img/zig-zag.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    height: auto;
+	/* height: 500px; */
+	/* margin-top: 60px; */
+}
+
+input {
+    border-radius: 50px;
+    padding-left: 20px;
+    background: transparent;
+    padding: 26px 120px 20px 26px;
+    border: 1px solid #fff;
+    font-family: 'Bricolage Grotesque';
+    color: #CFCFCF;
+    font-weight: 400;
+    width: 100%;
+}
+
+input::placeholder {
+    font-weight: 100;
+    color: #CFCFCF;
+    font-family: 'Bricolage Grotesque';
+}
+
+.footer-button {
+    background: linear-gradient(
+       180deg,
+       #690571 0%,
+       rgba(250, 100, 0, 0.5) 277.78%
+    );
+    
+    display: flex;
+    width: 30%;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+ }

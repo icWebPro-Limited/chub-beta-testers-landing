@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("./fonts/Glancyr-Regular.otf");
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-ThinItalic.otf") format("opentype");
+   font-weight: 100;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-Bold.otf") format("opentype");
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-BoldItalic.otf") format("opentype");
+   font-weight: 700;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-ExtraLight.otf") format("opentype");
+   font-weight: 200;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-ExtraLightItalic.otf") format("opentype");
+   font-weight: 200;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-Italic.otf") format("opentype");
+   font-weight: 400;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-Light.otf") format("opentype");
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-LightItalic.otf") format("opentype");
+   font-weight: 300;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-Medium.otf") format("opentype");
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-MediumItalic.otf") format("opentype");
+   font-weight: 500;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-SemiBold.otf") format("opentype");
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-SemiBoldItalic.otf") format("opentype");
+   font-weight: 600;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Glancyr";
+   src: url("/fonts/Glancyr-Thin.otf") format("opentype");
+   font-weight: 100;
+   font-style: normal;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   color: white;
+}
+
+body {
+   background-color: #1e0221;
+   font-family: "Bricolage Grotesque";
+   height: auto;
+}
+
+footer {
+   /* height: 600px; */
+   height: auto;
+   width: 100%;
+   bottom: 0;
+   background-color: #37083c;
+   margin-top: 100px;
+}
+
+h1,
+h2,
+h3,
+.glancyr {
+   font-family: "Glancyr", sans-serif;
+}
+
+.buttons {
+   border-radius: 100px;
+   font-family: "Bricolage Grotesque";
+}
+
+.arrow-button {
+   padding: 10px;
+}
+
+.header {
+   color: #1E0221;
+   width: 1240px;
+   height: 100px;
+   top: 48px;
+   border-radius: 100px;
+   position: absolute;
+   margin: auto 14px;
+   border-radius: 100px;
+   background: #fff;
+   /* mix-blend-mode: overlay; */
+}
+
+.blog-header {
+   color: white;
+   width: 1640px;
+   height: 100px;
+   top: 48px;
+   border-radius: 100px;
+   position: absolute;
+   margin: auto 14px;
+   border-radius: 100px;
+   background: #56021f;
+   /* mix-blend-mode: overlay; */
+}
+
+.nav-links {
+   color: #1E0221;
+   background-color: transparent;
+}
+
+.header-button {
+   /* background: linear-gradient(
+      180deg,
+      #690571 0%,
+      rgba(250, 100, 0, 0.5) 277.78%
+   ); */
+   background-color: #E84500;
+   color: white;
+   display: flex;
+   width: 220px;
+   height: 72px;
+   padding: 24px 40px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   flex-shrink: 0;
+}
+
+.join-button1 {
+   border-radius: 100px;
+   border: 1px solid #E84500;
+   background: #E84500;
+   font-weight: 900;
+   color: white;
+}
+
+.join-button2 {
+   border-radius: 100px;
+   border: 1px solid #fff;
+   background: #fff;
+   font-weight: 900;
+   color: #690571;
+}
+
+.download-button {
+   border-radius: 100px;
+   border: 1px solid #690571;
+   background: #33023b;
+}
+
+.divided-grid {
+   padding-bottom: 35px;
+   padding-right: 36px;
+   border-top-right-radius: 30px;
+   border-bottom-right-radius: 30px;
+   color: white !important;
+   font-size: 56px;
+}
+
+@keyframes slideAnimation {
+   0%,
+   100% {
+      transform: translateX(0);
+   }
+   50% {
+      transform: translateX(-350px);
+   }
+}
+
+.carousel {
+   animation: slideAnimation 10s ease-in-out infinite;
+}
+
+.mini-features {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 2rem;
+   align-items: center;
+   border-radius: 30px;
+}
+
+.mini-features img {
+   width: 44px;
+   padding: 10px;
+   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+   .mini-features {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      flex-direction: column;
+      font-size: 0.6rem;
+      border-radius: 10px;
+   }
+}
