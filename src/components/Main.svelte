@@ -20,6 +20,14 @@
     import iPhoneStock1 from "../assets/img/Challenges1.png";
     import iPhoneStock2 from "../assets/img/Challenges2.png";
     import SToroid from "../assets/img/SuperToroid-White-Glossy.png";
+    import ChubPlayground from "../assets/img/79869.png";
+    import CombinedFaces from "../assets/img/pexels-cottonbro-48816191.png";
+    import SpaceWorld from "../assets/img/Rectangle-5.png";
+    import Frames34954 from "../assets/img/Frame4273209401.png";
+    import MockUp1 from "../assets/img/MockUp1.png";
+    import DiscussionImg from "../assets/img/Feedback-2.png";
+    import RocketImg from "../assets/img/Rectangle-6.png";
+    import TrophyImg from "../assets/img/Design-3.png";
     function LearnMore(){
         location.href="#downloadApp";
     }
@@ -31,11 +39,11 @@
 
 <main class="grid justify-center p-4 lg:my-[200px] w-full">
     
-    <!-- SECTION ONE -->
+    <!-- SECTION ONE: First View -->
     <section id="title" class="max-md:mx-[20px] mx-[40px] p-7 grid grid-cols-1 bg-transparent">
         
         <div class="justify-center mb-4 flex max-md:w-[full] lg:hidden">
-            <img src="{ChubLogo}" alt="" class="w-[100px]">
+            <img src="{ChubLogo}" alt="" class="w-[150px]">
         </div>
         <h1 class="max-md:text-[30px] max-md:leading-[1.2] text-[70px] font-[900] leading-[100px] text-center"><span class="text-[#fa9b64]">Fun</span>, Community, <span class="text-[#9cffcf] glancyr">Growth</span></h1>
         
@@ -43,23 +51,68 @@
         
         <div class="max-md:grid max-md:mt-8 flex justify-center max-md:gap-4 gap-10 mt-[40px]">
             <a href="/beta-tester">
-                <button class="join-button1 max-md:h-[70px] max-md:w-[300px] h-[60px] w-[280px] flex gap-2 leading-[2] justify-center items-center font-[300]">
-                    <img class="size-[25px] bg-transparent" src={PlaystoreJoin} alt="playstore-logo">Android early access
+                <button class="join-button1 max-md:h-[50px] max-md:w-[250px] h-[60px] w-[280px] flex gap-2 leading-[2] justify-center items-center font-[300]">
+                    <img class="max-md:size-[15px] size-[25px] bg-transparent" src={PlaystoreJoin} alt="playstore-logo">Android early access
                 </button>
             </a>
             
             <a href="/beta-tester">
-                <button class="join-button2 max-md:h-[70px] max-md:w-[300px] h-[60px] w-[280px] flex gap-2 leading-[2] justify-center items-center font-[300]">
-                    <img class="size-[25px] bg-transparent text-[#690571]" src={AppstoreJoin} alt="playstore-logo">iOS early access
+                <button class="join-button2 max-md:h-[50px] max-md:w-[250px] h-[60px] w-[280px] flex gap-2 leading-[2] justify-center items-center font-[300]">
+                    <img class="max-md:size-[15px] size-[25px] bg-transparent text-[#690571]" src={AppstoreJoin} alt="playstore-logo">iOS early access
                 </button>
             </a>
         </div>
         
-        <div>
-            
-        </div>
+        
     </section>
+    <div class="max-md:mt-[20px] max-md:mb-[20px]">
+        <img src={ChubPlayground} alt="chub-playground" class="chub-playground w-full max-md:w-full">
+    </div>
     
+    
+    <!-- SECTION TWO: Multiple Containers--> 
+    <div class="grid gap-2 max-md:hidden my-[100px]">
+        <div class="p-6 mx-[120px] justify-center flex gap-5 h-[100%]">
+            <div id="container1" class="flex flex-col gap-1 mx-auto w-[50%] h-full">
+                <img src={CombinedFaces} alt="People" class="w-auto rounded-lg h-auto object-cover">
+                <div class="flex flex-col justify-normal h-full w-full">
+                    <p class="relative top-[100px] w-[300px] left-[40px] mt-[-50px]">
+                        Seamlessly navigate the CHUB community and interact with people from all over the world and diverse ages
+                    </p>
+                    <img src={SpaceWorld} alt="Space" class="w-full rounded-lg h-[100%] object-cover">
+                </div>
+            </div>
+            <div id="container2" class="flex flex-col gap-4 mx-auto w-[50%] h-full">
+                <div class="flex justify-center w-full bg-[#b7c1ff] rounded-lg items-end h-full">
+                    <img src={Frames34954} alt="People" class="w-100px rounded-lg h-[90%] w-[60%]">
+                </div>
+                <div class="flex justify-center w-full gap-4 h-full">
+                    <div class="bg-[#edd9ff] flex flex-col justify-end items-end rounded-lg h-full w-[100%]">
+                        <img src={MockUp1} alt="People" class="rounded-lg h-[80%]">
+                    </div>
+                    <div class="flex flex-col gap-4 h-full w-full">
+                        <div class="bg-[#fef8b7] h-full w-full rounded-lg flex flex-col">
+                            <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Social <br> Interaction</p>
+                            <div class="w-full flex-grow flex items-end justify-end">
+                                <img src={DiscussionImg} alt="Chat Icon" class="rounded-lg h-auto w-[200px]">
+                            </div>
+                        </div>
+                        <img src={RocketImg} alt="Rocket" class="rounded-lg h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="flex justify-between px-10 mx-[140px] rounded-lg items-end bg-[#c9ffb7]">
+            <div class="mb-[40px]">
+                <p class="text-black font-[900] text-[30px]">Earn points, gems and badges.</p>
+                <span class="text-black font-[300] text-[18px]">Get rewarded for your hard work, stand out.</span>
+            </div>
+            <div>
+                <img src={TrophyImg} alt="Trophy" class="w-[400px]">
+            </div>
+        </div>
+          
+    </div>
     <!-- SECTION TWO -->
     <section id="about" class="max-md:hidden mt-[200px] h-[800px] overflow-x-scroll w-full flex gap-3 bg-[#1E0221]">
         <div class="carousel flex flex-row gap-3">

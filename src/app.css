@@ -11,16 +11,16 @@
 
 @font-face {
    font-family: "Glancyr";
-   src: url("/fonts/Glancyr-ThinItalic.otf") format("opentype");
+   src: url("./fonts/Glancyr-ThinItalic.otf") format("opentype");
    font-weight: 100;
    font-style: italic;
 }
 
 @font-face {
    font-family: "Glancyr";
-   src: url("/fonts/Glancyr-Bold.otf") format("opentype");
+   src: url("./fonts/Glancyr-Bold.otf") format("opentype");
    font-weight: 700;
-   font-style: normal;
+   font-style: bold;
 }
 
 @font-face {
@@ -205,6 +205,11 @@ h3,
    background: #fff;
    font-weight: 900;
    color: #690571;
+}
+
+.chub-playground {
+   /* clip-path: inset(5% 0 0 0); */
+   margin-top: -50px;
 }
 
 .download-button {
