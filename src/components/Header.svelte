@@ -16,7 +16,7 @@
 
 <header class="w-auto justify-center flex">
     
-    <div class="header flex justify-between">
+    <div class="header flex justify-between bg-[#690571]">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
         <img on:click={refreshPage} class="my-[24px] ml-[80px] bg-transparent " src={ChubLogo} alt='CHUB logo'>

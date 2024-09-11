@@ -4,5 +4,5 @@
     let y;
 </script>
 
-<Header {y} />
+<!-- <Header {y} /> -->
 <Main />
