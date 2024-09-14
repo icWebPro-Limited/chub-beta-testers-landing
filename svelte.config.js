@@ -18,7 +18,7 @@ const config = {
     adapter: adapter({
       pages: 'build',    // Directory where the generated pages go (you can use 'dist' if you prefer)
       assets: 'build',   // Directory where the assets go
-      fallback: null     // No SPA fallback for static sites
+      fallback: 'index.html'  // Fallback to index.html for dynamic routes
     }),
     paths: {
       base: process.env.NODE_ENV === 'production' ? '/chub-beta-testers-landing' : ''
