@@ -2,59 +2,324 @@
   ".svelte-kit/generated/client-optimized/app.js": {
     "dynamicImports": [
       ".svelte-kit/generated/client-optimized/nodes/0.js",
-      ".svelte-kit/generated/client-optimized/nodes/1.js"
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js",
+      ".svelte-kit/generated/client-optimized/nodes/3.js",
+      ".svelte-kit/generated/client-optimized/nodes/4.js"
     ],
-    "file": "_app/immutable/entry/app.UozROIiz.js",
+    "file": "_app/immutable/entry/app.tlc6iQyY.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js",
-      "_index.fwz0P8IJ.js"
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js"
     ],
     "isEntry": true,
     "src": ".svelte-kit/generated/client-optimized/app.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/0.js": {
-    "file": "_app/immutable/nodes/0.TPefyB_B.js",
+    "assets": [
+      "_app/immutable/assets/Glancyr-Regular.CRzI-QcJ.otf",
+      "_app/immutable/assets/Glancyr-ThinItalic.PMNCY-ws.otf",
+      "_app/immutable/assets/Glancyr-Bold.wgybKp5I.otf",
+      "_app/immutable/assets/Group221.jUnLDrF_.png",
+      "_app/immutable/assets/Group1000011280.w-lNAIWo.png"
+    ],
+    "css": [
+      "_app/immutable/assets/0.sbyfvb7O.css"
+    ],
+    "file": "_app/immutable/nodes/0.hMPB6KNK.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js",
-      "_index.fwz0P8IJ.js"
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js",
+      "_stores.-U4rD-Tq.js",
+      "_wLogo_white.8Z44ub5K.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.Fii1-Bfu.js",
+    "file": "_app/immutable/nodes/1.mjcAn9Km.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js",
-      "_index.fwz0P8IJ.js",
-      "_singletons.vTLQpjzI.js"
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": ".svelte-kit/generated/client-optimized/nodes/1.js"
   },
-  "_index.fwz0P8IJ.js": {
-    "file": "_app/immutable/chunks/index.fwz0P8IJ.js",
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "assets": [
+      "_app/immutable/assets/chub_logo_main.FQBe6gmu.png",
+      "_app/immutable/assets/bLaptopHold.Nc72HcGi.png",
+      "_app/immutable/assets/pexels-cottonbro-48816191.ifFMBvGU.png",
+      "_app/immutable/assets/Frame1000011791.MQs3kzk1.png",
+      "_app/immutable/assets/Frame1000011803.DUaxlcKq.png",
+      "_app/immutable/assets/Feedback-2.Xzm77eSK.png",
+      "_app/immutable/assets/Design04.G8BoYT-X.png",
+      "_app/immutable/assets/Design4.HpQmKoAy.png",
+      "_app/immutable/assets/iphoneMeta.AsQ6Vago.png",
+      "_app/immutable/assets/Frame1000011826.Ops4a05q.png"
+    ],
+    "file": "_app/immutable/nodes/2.TAxVsq0v.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js"
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/3.js": {
+    "file": "_app/immutable/nodes/3.WWv6o1Vo.js",
+    "imports": [
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js",
+      "_test.tDWDHMTb.js",
+      "_wLogo_white.8Z44ub5K.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/3.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/4.js": {
+    "file": "_app/immutable/nodes/4.Tf0zPKJb.js",
+    "imports": [
+      "_scheduler.mvuM14Vw.js",
+      "_index.coeg7t6C.js",
+      "_test.tDWDHMTb.js",
+      "_stores.-U4rD-Tq.js",
+      "_wLogo_white.8Z44ub5K.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/4.js"
+  },
+  "_index.coeg7t6C.js": {
+    "file": "_app/immutable/chunks/index.coeg7t6C.js",
+    "imports": [
+      "_scheduler.mvuM14Vw.js"
     ]
   },
-  "_scheduler.k-kUyWhY.js": {
-    "file": "_app/immutable/chunks/scheduler.k-kUyWhY.js"
+  "_scheduler.mvuM14Vw.js": {
+    "file": "_app/immutable/chunks/scheduler.mvuM14Vw.js"
   },
-  "_singletons.vTLQpjzI.js": {
-    "file": "_app/immutable/chunks/singletons.vTLQpjzI.js",
+  "_singletons.6c2gYtsa.js": {
+    "file": "_app/immutable/chunks/singletons.6c2gYtsa.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js"
+      "_scheduler.mvuM14Vw.js"
     ]
+  },
+  "_stores.-U4rD-Tq.js": {
+    "file": "_app/immutable/chunks/stores.-U4rD-Tq.js",
+    "imports": [
+      "_singletons.6c2gYtsa.js"
+    ]
+  },
+  "_test.tDWDHMTb.js": {
+    "file": "_app/immutable/chunks/test.tDWDHMTb.js",
+    "imports": [
+      "_index.coeg7t6C.js",
+      "_scheduler.mvuM14Vw.js",
+      "_wLogo_white.8Z44ub5K.js"
+    ]
+  },
+  "_wLogo_white.8Z44ub5K.js": {
+    "assets": [
+      "_app/immutable/assets/wLogo_white.QuBn1yDu.png"
+    ],
+    "file": "_app/immutable/chunks/wLogo_white.8Z44ub5K.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/entry/start.ER54eZWD.js",
+    "file": "_app/immutable/entry/start.JyTK4yKu.js",
     "imports": [
-      "_scheduler.k-kUyWhY.js",
-      "_singletons.vTLQpjzI.js"
+      "_scheduler.mvuM14Vw.js",
+      "_singletons.6c2gYtsa.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
+  },
+  "src/assets/img/79869.png": {
+    "file": "_app/immutable/assets/79869.tHTgMaom.png",
+    "src": "src/assets/img/79869.png"
+  },
+  "src/assets/img/Challenges1.png": {
+    "file": "_app/immutable/assets/Challenges1.a3awvIfy.png",
+    "src": "src/assets/img/Challenges1.png"
+  },
+  "src/assets/img/Challenges2.png": {
+    "file": "_app/immutable/assets/Challenges2.y5iJiFzD.png",
+    "src": "src/assets/img/Challenges2.png"
+  },
+  "src/assets/img/Design-3.png": {
+    "file": "_app/immutable/assets/Design-3.AJDrtmtG.png",
+    "src": "src/assets/img/Design-3.png"
+  },
+  "src/assets/img/Design04.png": {
+    "file": "_app/immutable/assets/Design04.G8BoYT-X.png",
+    "src": "src/assets/img/Design04.png"
+  },
+  "src/assets/img/Design4.png": {
+    "file": "_app/immutable/assets/Design4.HpQmKoAy.png",
+    "src": "src/assets/img/Design4.png"
+  },
+  "src/assets/img/Development.png": {
+    "file": "_app/immutable/assets/Development.iQ9vZQs-.png",
+    "src": "src/assets/img/Development.png"
+  },
+  "src/assets/img/Exercise.png": {
+    "file": "_app/immutable/assets/Exercise.FBd5MEs6.png",
+    "src": "src/assets/img/Exercise.png"
+  },
+  "src/assets/img/F1000002390.png": {
+    "file": "_app/immutable/assets/F1000002390.YG63QDWL.png",
+    "src": "src/assets/img/F1000002390.png"
+  },
+  "src/assets/img/Feedback-2.png": {
+    "file": "_app/immutable/assets/Feedback-2.Xzm77eSK.png",
+    "src": "src/assets/img/Feedback-2.png"
+  },
+  "src/assets/img/Frame10000023902.png": {
+    "file": "_app/immutable/assets/Frame10000023902.aQxjZ7RB.png",
+    "src": "src/assets/img/Frame10000023902.png"
+  },
+  "src/assets/img/Frame10000023903.png": {
+    "file": "_app/immutable/assets/Frame10000023903.kPwAyl2P.png",
+    "src": "src/assets/img/Frame10000023903.png"
+  },
+  "src/assets/img/Frame1000011749.png": {
+    "file": "_app/immutable/assets/Frame1000011749._Q0d6W-N.png",
+    "src": "src/assets/img/Frame1000011749.png"
+  },
+  "src/assets/img/Frame1000011750.png": {
+    "file": "_app/immutable/assets/Frame1000011750.m71U6kE2.png",
+    "src": "src/assets/img/Frame1000011750.png"
+  },
+  "src/assets/img/Frame1000011751.png": {
+    "file": "_app/immutable/assets/Frame1000011751.5GShCY8A.png",
+    "src": "src/assets/img/Frame1000011751.png"
+  },
+  "src/assets/img/Frame1000011791.png": {
+    "file": "_app/immutable/assets/Frame1000011791.MQs3kzk1.png",
+    "src": "src/assets/img/Frame1000011791.png"
+  },
+  "src/assets/img/Frame1000011803.png": {
+    "file": "_app/immutable/assets/Frame1000011803.DUaxlcKq.png",
+    "src": "src/assets/img/Frame1000011803.png"
+  },
+  "src/assets/img/Frame1000011826.png": {
+    "file": "_app/immutable/assets/Frame1000011826.Ops4a05q.png",
+    "src": "src/assets/img/Frame1000011826.png"
+  },
+  "src/assets/img/Frame4273209401-3.png": {
+    "file": "_app/immutable/assets/Frame4273209401-3.e1kcXtQ8.png",
+    "src": "src/assets/img/Frame4273209401-3.png"
+  },
+  "src/assets/img/Frame4273209401.png": {
+    "file": "_app/immutable/assets/Frame4273209401.GZgrRoid.png",
+    "src": "src/assets/img/Frame4273209401.png"
+  },
+  "src/assets/img/Group-2.png": {
+    "file": "_app/immutable/assets/Group-2.HQz7FPvI.png",
+    "src": "src/assets/img/Group-2.png"
+  },
+  "src/assets/img/Group-3.png": {
+    "file": "_app/immutable/assets/Group-3.e1bc3BCq.png",
+    "src": "src/assets/img/Group-3.png"
+  },
+  "src/assets/img/Group1000002118.png": {
+    "file": "_app/immutable/assets/Group1000002118.vcvBrAYM.png",
+    "src": "src/assets/img/Group1000002118.png"
+  },
+  "src/assets/img/Group1000011262.png": {
+    "file": "_app/immutable/assets/Group1000011262.GshtsOkG.png",
+    "src": "src/assets/img/Group1000011262.png"
+  },
+  "src/assets/img/Group1000011263.png": {
+    "file": "_app/immutable/assets/Group1000011263.KvUjiAt0.png",
+    "src": "src/assets/img/Group1000011263.png"
+  },
+  "src/assets/img/Group1000011264.png": {
+    "file": "_app/immutable/assets/Group1000011264.Yq45kItE.png",
+    "src": "src/assets/img/Group1000011264.png"
+  },
+  "src/assets/img/Group1000011266.png": {
+    "file": "_app/immutable/assets/Group1000011266.wTKAofL9.png",
+    "src": "src/assets/img/Group1000011266.png"
+  },
+  "src/assets/img/Group1000011280.png": {
+    "file": "_app/immutable/assets/Group1000011280.w-lNAIWo.png",
+    "src": "src/assets/img/Group1000011280.png"
+  },
+  "src/assets/img/Group221.png": {
+    "file": "_app/immutable/assets/Group221.jUnLDrF_.png",
+    "src": "src/assets/img/Group221.png"
+  },
+  "src/assets/img/Health.png": {
+    "file": "_app/immutable/assets/Health.4Os_6Ebt.png",
+    "src": "src/assets/img/Health.png"
+  },
+  "src/assets/img/MockUp1.png": {
+    "file": "_app/immutable/assets/MockUp1.3GvZTK-T.png",
+    "src": "src/assets/img/MockUp1.png"
+  },
+  "src/assets/img/Rectangle-5.png": {
+    "file": "_app/immutable/assets/Rectangle-5.q-EbelXt.png",
+    "src": "src/assets/img/Rectangle-5.png"
+  },
+  "src/assets/img/Rectangle-6.png": {
+    "file": "_app/immutable/assets/Rectangle-6.E3XG0vRq.png",
+    "src": "src/assets/img/Rectangle-6.png"
+  },
+  "src/assets/img/Rectangle-7.png": {
+    "file": "_app/immutable/assets/Rectangle-7.wat8gWWA.png",
+    "src": "src/assets/img/Rectangle-7.png"
+  },
+  "src/assets/img/RoundCube-White-Glossy.png": {
+    "file": "_app/immutable/assets/RoundCube-White-Glossy.gUW1Rsu1.png",
+    "src": "src/assets/img/RoundCube-White-Glossy.png"
+  },
+  "src/assets/img/SuperToroid-White-Glossy.png": {
+    "file": "_app/immutable/assets/SuperToroid-White-Glossy.9gzRmAsl.png",
+    "src": "src/assets/img/SuperToroid-White-Glossy.png"
+  },
+  "src/assets/img/bLaptopHold.png": {
+    "file": "_app/immutable/assets/bLaptopHold.Nc72HcGi.png",
+    "src": "src/assets/img/bLaptopHold.png"
+  },
+  "src/assets/img/chub_logo_main.png": {
+    "file": "_app/immutable/assets/chub_logo_main.FQBe6gmu.png",
+    "src": "src/assets/img/chub_logo_main.png"
+  },
+  "src/assets/img/iphoneMeta.png": {
+    "file": "_app/immutable/assets/iphoneMeta.AsQ6Vago.png",
+    "src": "src/assets/img/iphoneMeta.png"
+  },
+  "src/assets/img/main-2.png": {
+    "file": "_app/immutable/assets/main-2.GA74EzTR.png",
+    "src": "src/assets/img/main-2.png"
+  },
+  "src/assets/img/main.png": {
+    "file": "_app/immutable/assets/main.yGnOtWwA.png",
+    "src": "src/assets/img/main.png"
+  },
+  "src/assets/img/pexels-cottonbro-48816191.png": {
+    "file": "_app/immutable/assets/pexels-cottonbro-48816191.ifFMBvGU.png",
+    "src": "src/assets/img/pexels-cottonbro-48816191.png"
+  },
+  "src/assets/img/wLogo_white.png": {
+    "file": "_app/immutable/assets/wLogo_white.QuBn1yDu.png",
+    "src": "src/assets/img/wLogo_white.png"
+  },
+  "src/fonts/Glancyr-Bold.otf": {
+    "file": "_app/immutable/assets/Glancyr-Bold.wgybKp5I.otf",
+    "src": "src/fonts/Glancyr-Bold.otf"
+  },
+  "src/fonts/Glancyr-Regular.otf": {
+    "file": "_app/immutable/assets/Glancyr-Regular.CRzI-QcJ.otf",
+    "src": "src/fonts/Glancyr-Regular.otf"
+  },
+  "src/fonts/Glancyr-ThinItalic.otf": {
+    "file": "_app/immutable/assets/Glancyr-ThinItalic.PMNCY-ws.otf",
+    "src": "src/fonts/Glancyr-ThinItalic.otf"
   }
 }

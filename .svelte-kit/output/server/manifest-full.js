@@ -10,13 +10,36 @@ return {
 	assets: new Set([".DS_Store","blog-images/P3.jpg","blog-images/P4.jpg","blog-images/P5.jpg","blog-images/P6.jpg","favicon.png","favicon0.png"]),
 	mimeTypes: {".jpg":"image/jpeg",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.ER54eZWD.js","app":"_app/immutable/entry/app.UozROIiz.js","imports":["_app/immutable/entry/start.ER54eZWD.js","_app/immutable/chunks/scheduler.k-kUyWhY.js","_app/immutable/chunks/singletons.vTLQpjzI.js","_app/immutable/entry/app.UozROIiz.js","_app/immutable/chunks/scheduler.k-kUyWhY.js","_app/immutable/chunks/index.fwz0P8IJ.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.JyTK4yKu.js","app":"_app/immutable/entry/app.tlc6iQyY.js","imports":["_app/immutable/entry/start.JyTK4yKu.js","_app/immutable/chunks/scheduler.mvuM14Vw.js","_app/immutable/chunks/singletons.6c2gYtsa.js","_app/immutable/entry/app.tlc6iQyY.js","_app/immutable/chunks/scheduler.mvuM14Vw.js","_app/immutable/chunks/index.coeg7t6C.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
-			__memo(() => import('./nodes/1.js'))
+			__memo(() => import('./nodes/1.js')),
+			__memo(() => import('./nodes/2.js')),
+			__memo(() => import('./nodes/3.js')),
+			__memo(() => import('./nodes/4.js'))
 		],
 		routes: [
-			
+			{
+				id: "/",
+				pattern: /^\/$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 2 },
+				endpoint: null
+			},
+			{
+				id: "/blog",
+				pattern: /^\/blog\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 3 },
+				endpoint: null
+			},
+			{
+				id: "/blog/[slug]",
+				pattern: /^\/blog\/([^/]+?)\/?$/,
+				params: [{"name":"slug","optional":false,"rest":false,"chained":false}],
+				page: { layouts: [0,], errors: [1,], leaf: 4 },
+				endpoint: null
+			}
 		],
 		matchers: async () => {
 			
