@@ -27,11 +27,22 @@
     import RocketImg from "../assets/img/Rectangle-6.png";
     import TrophyImg from "../assets/img/Design-3.png";
     // import ThreadedLines from "../assets/img/Group1000011280.png";
+    import Design04 from "../assets/img/Design04.png";
+    import Design4 from "../assets/img/Design4.png";
+    import iphoneMeta from "../assets/img/iphoneMeta.png";
+    import Frame1000011826 from "../assets/img/Frame1000011826.png";
+    import Frame1000011749 from "../assets/img/Frame1000011749.png";
+    import Frame1000011750 from "../assets/img/Frame1000011750.png";
+    import Frame1000011751 from "../assets/img/Frame1000011751.png";
     import Slider from "./Slider.svelte";
     import TextSlide from "./TextSlide.svelte";
     import Header from "./Header.svelte";
     function LearnMore(){
         location.href="#downloadApp";
+    }
+    
+    function goToForm(){
+        location.href="#waitlist-form";
     }
     
     function GoToReviews(){
@@ -71,7 +82,7 @@
     }
 </script>
 
-<main class="grid justify-center pb-4 lg:mt-[0px] w-full">
+<main class="block pb-0 lg:mt-[0px] w-full">
     
     <!-- SECTION ONE: First View -->
     <section id="title" class="max-md:mx-[0px] p-7 grid grid-cols-1 bg-[#690571]">
@@ -109,7 +120,7 @@
         <div class="z-20 max-md:grid max-md:mt-8 flex flex-col justify-center max-md:gap-4 gap-10 mt-[40px]">
             
             <!-- Form goes here -->
-            <div class="flex justify-center">
+            <div id="waitlist-form" class="flex justify-center">
                 <form id=waitlist-form action="block" method="POST" class="mb-[150px]" on:submit|preventDefault={() => alert('Form submitted!')}>
                     <div class="flex flex-row w-[100%] justify-center gap-8">
                         <input type="text"  minlength=3 maxlength="100" bind:value={fullname} name=fullname id=fullname class="waitlist-input-left" placeholder="Enter your Name" on:input="{(e) => e.target.setCustomValidity(fullname ? '' : 'We need a name 🥹.')}" required>
@@ -220,7 +231,7 @@
         </div>
     </section>
     
-    <!-- SECTION THREE: Accordion-->
+    <!-- SECTION THREE: About-->
     <section class="max-md:mt-[20px] max-md:mb-[20px] mt-[-100px]">
         <div class="flex justify-center gap-3 my-10 max-md:mx-0 lg:gap-7">
             <div class="lg:w-[350px]">
@@ -238,57 +249,60 @@
     </section>
     
     <!-- SECTION FOUR: Multiple Containers--> 
-    <section class="grid gap-2 max-md:hidden my-[100px]">
-        <div class="p-6 mx-[120px] justify-center flex gap-5 h-[100%]">
-            <div id="container1" class="flex flex-col gap-1 mx-auto w-[50%] h-full">
-                <img src={CombinedFaces} alt="People" class="w-auto rounded-lg h-auto object-cover">
-                <div class="flex flex-col justify-normal h-full w-full">
-                    <p class="relative top-[100px] w-[300px] left-[40px] mt-[-50px]">
-                        Seamlessly navigate the CHUB community and interact with people from all over the world and diverse ages
-                    </p>
-                    <img src={SpaceWorld} alt="Space" class="w-full rounded-lg h-[100%] object-cover">
-                </div>
-            </div>
-            <div id="container2" class="flex flex-col gap-4 mx-auto w-[50%] h-full">
-                <div class="flex justify-center w-full bg-[#b7c1ff] rounded-lg items-end h-full">
-                    <img src={Frames34954} alt="People" class="w-100px rounded-lg h-[90%] w-[60%]">
-                </div>
-                <div class="flex justify-center w-full gap-4 h-full">
-                    <div class="bg-[#edd9ff] flex flex-col justify-end items-end rounded-lg h-full w-[100%]">
-                        <img src={MockUp1} alt="People" class="rounded-lg h-[80%]">
-                    </div>
-                    <div class="flex flex-col gap-4 h-full w-full">
-                        <div class="bg-[#EEEEF0] h-full w-full rounded-lg flex flex-col">
-                            <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Be part of a <br> closely-knit <br> community</p>
-                            <div class="w-full flex-grow flex items-end justify-end">
-                                <img src={DiscussionImg} alt="Chat Icon" class="rounded-lg h-auto w-[200px]">
-                            </div>
-                        </div>
-                        <div class="bg-[#FFCADC] h-full w-full rounded-lg flex flex-col">
-                            <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Cultivate habits, <br> hit milestones</p>
-                            <div class="w-full flex-grow flex items-end justify-end">
-                                <img src={DiscussionImg} alt="Chat Icon" class="rounded-lg h-auto w-[200px]">
-                            </div>
-                        </div>
-                        <!-- <img src={RocketImg} alt="Rocket" class="rounded-lg h-auto"> -->
-                    </div>
-                </div>
-            </div>
-        </div>        
-        <div class="flex justify-between px-10 mx-[140px] rounded-2xl items-end bg-[#c9ffb7]">
-            <div class="mb-[40px]">
-                <p class="text-black font-[900] text-[30px]">Earn points, gems and badges.</p>
-                <span class="text-black font-[300] text-[18px]">Get rewarded for your hard work, stand out.</span>
+    <section class="grid gap-2 max-md:hidden my-[70px]">
+        
+        <h1 class="max-md:text-[25px] max-md:leading-[1.2] text-[40px] my-[50px] font-[400] leading-[1] text-center bricolage text-black">Ready to Challenge Yourself? <br>Join CHUB</h1>
+        
+        <div class="flex flex-row flex-wrap gap-3 justify-center">
+            <div>
+                <img src={Frame1000011826} alt="" class="rounded-lg h-auto object-cover w-[550px]">
             </div>
             <div>
-                <img src={TrophyImg} alt="Trophy" class="w-[400px]">
+                <img src={CombinedFaces} alt="" class="rounded-lg h-auto object-cover w-[550px]">
             </div>
         </div>
-          
+        <div class="flex flex-row flex-wrap gap-3 justify-center h-[500px]">
+            <div class="flex justify-center w-[550px] gap-4">
+                <div class="bg-[#fdf4fe] h-full w-full rounded-lg flex flex-col">
+                    <img src={Design04} alt="Chat Icon" class="mt-[40px] ml-[20px] rounded-lg h-auto w-[200px]">
+                    <p class="mt-[20px] ml-[20px] text-black font-[500] text-[26px]">Chub Champions: <br> Real stories, Real <br> Success</p>
+                    <button on:click={goToForm} class="buttons flyer-button my-[14px] ml-[20px] w-[40%] duration-200"> Try CHUB today</button>
+                </div>
+            </div>
+            <div class="flex flex-row gap-1 justify-center w-[550px] h-[500px]">
+                <div class="bg-[#edd9ff] w-[50%] h-full rounded-lg flex flex-col">
+                    <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Earn points, <br> gems and <br>badges</p>
+                    <img src={Design4} alt="" class="rounded-xl object-contain w-[full]">
+                </div>
+                <div class="flex flex-col gap-4 h-full w-[50%]">
+                    <div class="bg-[#EEEEF0] h-full w-full rounded-lg flex flex-col">
+                        <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Be part of a <br> closely-knit <br> community</p>
+                        <div class="w-full flex-grow flex items-end justify-end">
+                            <img src={DiscussionImg} alt="Chat Icon" class="rounded-lg h-auto w-[200px]">
+                        </div>
+                    </div>
+                    <div class="bg-[#FFCADC] h-full w-full rounded-lg flex flex-col">
+                        <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Cultivate habits, <br> hit milestones</p>
+                    </div>
+                    <!-- <img src={RocketImg} alt="Rocket" class="rounded-lg h-auto"> -->
+                </div>
+            </div>
+        </div>
+
     </section>
     
+    <!-- SECTION FIVE: Why Beta test-->
+    <!-- <section id="why-beta" class="max-md:mt-[50px] mt-[150px] w-full grid justify-center h-[600px]">
+        <center class="mx-10 max-md:mx-2">
+            <h4 class="text-[#E84500] max-md:text-[30px] mt-0 max-md:mx-5 max-md:leading-[1.2] md:w-[80vw] text-[40px] leading-[60px] text-center font-[900]">Why Beta test for us?</h4>
+        </center>
+        <div>
+            <TextSlide/>
+        </div>
+    </section> -->
+    
     <!-- SECTION THREE: Sliders -->
-    <section id="features" class="max-md:mt-[50px] mt-[50px] w-full grid justify-center">
+    <!-- <section id="features" class="max-md:mt-[50px] mt-[50px] w-full grid justify-center">
         <center class="mx-10 max-md:mx-2">
             <h4 class="text-[#FC3A0F] dela-gothic-one-regular">Why Challenge Hub</h4>
             <h4 class="max-md:text-[30px] mt-0 max-md:mx-5 max-md:leading-[1.2] md:w-[80vw] text-[60px] leading-[60px] text-center dela-gothic-one-regular">We heard <span class="text-[#fa1bf1] glancyr">you</span></h4>
@@ -300,22 +314,23 @@
             </div>
             
         </center>
-    </section>
+    </section> -->
     
-    <!-- SECTION FOUR: Why Beta test-->
-    <section id="why-beta" class="max-md:mt-[50px] mt-[150px] w-full grid justify-center h-[600px]">
-        <center class="mx-10 max-md:mx-2">
-            <h4 class="text-[#E84500] max-md:text-[30px] mt-0 max-md:mx-5 max-md:leading-[1.2] md:w-[80vw] text-[40px] leading-[60px] text-center font-[900]">Why Beta test for us?</h4>
-        </center>
-        <div>
-            <TextSlide/>
-        </div>
-    </section>
+    
 
-    <!-- SECTION FIVE -->
-    <section id="preview" class="max-md:my-[50px] h-[400px] mt-[250px] relative w-full grid justify-center bg-[#1E0221] max-[900px]:hidden">
-        
-        <div class="flex w-[75vw] cywwc justify-between px-1 py-0 gap-10 text-white rounded-[40px]">
+    <!-- SECTION FIVE: Experience -->
+    <section id="preview" class="max-md:my-[50px] mt-[100px] relative w-full bg-[#fbe7ff] max-[900px]:hidden pt-[80px]">
+        <div class="flex justify-center items-center flex-wrap flex-col">
+            <div class="w-[60%]">
+                <h1 class="max-md:text-[25px] max-md:leading-[1.2] text-[40px] mt-[50px] font-[400] leading-[1] text-center bricolage text-black">Experience All The Cool Features <br> Before Anyone Else! <br> Join The Waitlist!</h1>
+                <p class="text-center font-[100] pt-5 text-black">Be the First to Experience the Chub App!</p>
+            </div>
+            
+            <div class="w-[60%] mt-[100px] flex justify-center">
+                <img src={iphoneMeta} alt="" class="w-[600px]">
+            </div>
+        </div>
+        <!-- <div class="flex w-[75vw] cywwc justify-between px-1 py-0 gap-10 text-white rounded-[40px]">
             
             <div class="w-[60%] flex flex-row justify-left items-end relative">
                 <img src={RoundCube} alt="" class="absolute w-[15%] h-[25%]">
@@ -347,6 +362,6 @@
                 </div>
             </div>
             
-        </div>
+        </div> -->
     </section>
 </main>

@@ -1,4 +1,6 @@
 <script>
+    import { faLinkedin, faTwitter, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+    import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
     import "../assets/css/footer.css";
     import ChubLogo from "../assets/img/wLogo_white.png";
     import swal from 'sweetalert';
@@ -64,7 +66,7 @@
         <div class="justify-center mx-20 max-lg:mx-5">
             
             <!-- Connect -->
-            <form class="w-full flex justify-center pb-[50px] max-md:pb-[50px] border-solid border-b-white" on:submit={handleSubmit}>
+            <!-- <form class="w-full flex justify-center pb-[50px] max-md:pb-[50px] border-solid border-b-white" on:submit={handleSubmit}>
                 
                 <div class="flex justify-between items-center w-full max-md:flex-col">
                     
@@ -83,29 +85,41 @@
                     </div>
                     
                 </div>
-            </form>
+            </form> -->
             
             <!-- Links -->
-            <div class="mt-20 max-md:mt-10 max-md:block flex justify-between max-md:pb-[50px] pb-[50px] border-b-[1px] border-solid border-b-white">
-                <div class="w-full">
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                    <img on:click={refreshPage} class="bg-transparent w-[9rem] md:w-[14rem] ml-[-10px]" src={ChubLogo} alt='CHUB logo'>
-                    <p class="text-[0.4rem] lg:text-[12px]">Push yourself beyond the limit.</p>
-                </div>
-                
-                <!-- Links list-->
-                <div class="flex w-full justify-center gap-20 max-md:flex-col max-md:mt-10 max-md:gap-[15px]">
-                    <div class="flex justify-around gap-3 w-full">
-                        <a href="/" class="font-[600] pb-5">Home</a>
-                        
-                        <a href="/blog" class="font-[600] pb-5">Blog</a>
-                        
-                        <a href="/contact" class="font-[600] pb-5">Contact us</a>
-                        
-                        <a href="/discord" class="font-[600] pb-5">Discord</a>
-                        
+            <div class="max-md:pb-[50px] pb-[50px] border-b-[1px] border-solid border-b-white">
+                <div class="mt-20 max-md:mt-10 max-md:block flex justify-between">
+                    <div class="w-full">
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                        <img on:click={refreshPage} class="bg-transparent w-[9rem] md:w-[14rem] ml-[-10px]" src={ChubLogo} alt='CHUB logo'>
+                        <!-- <p class="text-[0.4rem] lg:text-[12px]">Push yourself beyond the limit.</p> -->
+                        <p class="text-[0.4rem] lg:text-[12px]">Ready, Set, Grow.</p>
                     </div>
+                    
+                    <!-- Links list-->
+                    
+                    <div class="flex items-center justify-end gap-10 w-full max-md:flex-col max-md:mt-10 max-md:gap-[15px]">
+                    
+                        <a href="https://linkedin.com/thechubapp">
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                        </a>
+                        <a href="https://twitter.com/@thechubapp">
+                            <FontAwesomeIcon icon={faTwitter} size="2x" />
+                        </a>
+                        <a href="https://tiktok.com/@thechubapp">
+                            <FontAwesomeIcon icon={faTiktok} size="2x" />
+                        </a>
+                        <a href="https://instagram.com/@thechubapp">
+                            <FontAwesomeIcon icon={faInstagram} size="2x" />
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-20 mt-5">
+                    <a href="/"> Home </a>
+                    <a href="#"> Contact Us </a>
+                    <a href="#"> Discord </a>
                 </div>
             </div>
             

@@ -19,6 +19,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.6.0",
+		"@fortawesome/free-brands-svg-icons": "^6.6.0",
+		"@fortawesome/svelte-fontawesome": "^0.2.2",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"flickity": "^3.0.0",
 		"svelte-routing": "^2.11.0",
