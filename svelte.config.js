@@ -21,7 +21,7 @@ const config = {
       fallback: 'index.html'  // Fallback to index.html for dynamic routes
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/chub-beta-testers-landing' : ''
+      base: '/chub-beta-testers-landing',
     }
   },
   preprocess: vitePreprocess()
