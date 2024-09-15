@@ -14,14 +14,14 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    // Use the static adapter to generate static files
+    // Ensure static adapter outputs files correctly
     adapter: adapter({
-      pages: 'docs',    // Directory where the generated pages go (you can use 'dist' if you prefer)
-      assets: 'docs',   // Directory where the assets go
-      fallback: 'index.html'  // Fallback to index.html for dynamic routes
+      pages: 'docs',  // Output to the /docs folder
+      assets: 'docs',
+      fallback: 'index.html',  // Use index.html as fallback for dynamic routes
     }),
     paths: {
-      base: '/chub-beta-testers-landing',
+      base: '/chub-beta-testers-landing',  // Ensure the base path matches the repository name
     }
   },
   preprocess: vitePreprocess()
