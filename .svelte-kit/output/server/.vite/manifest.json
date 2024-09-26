@@ -16,25 +16,6 @@
   "_ssr.js": {
     "file": "chunks/ssr.js"
   },
-  "_stores.js": {
-    "file": "chunks/stores.js",
-    "imports": [
-      "_ssr.js"
-    ]
-  },
-  "_test.js": {
-    "file": "chunks/test.js",
-    "imports": [
-      "_ssr.js",
-      "_wLogo_white.js"
-    ]
-  },
-  "_wLogo_white.js": {
-    "assets": [
-      "_app/immutable/assets/wLogo_white.QuBn1yDu.png"
-    ],
-    "file": "chunks/wLogo_white.js"
-  },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "imports": [
@@ -68,29 +49,9 @@
     "file": "_app/immutable/assets/Design4.HpQmKoAy.png",
     "src": "src/assets/img/Design4.png"
   },
-  "src/assets/img/Development.png": {
-    "file": "_app/immutable/assets/Development.iQ9vZQs-.png",
-    "src": "src/assets/img/Development.png"
-  },
-  "src/assets/img/Exercise.png": {
-    "file": "_app/immutable/assets/Exercise.FBd5MEs6.png",
-    "src": "src/assets/img/Exercise.png"
-  },
-  "src/assets/img/F1000002390.png": {
-    "file": "_app/immutable/assets/F1000002390.YG63QDWL.png",
-    "src": "src/assets/img/F1000002390.png"
-  },
   "src/assets/img/Feedback-2.png": {
     "file": "_app/immutable/assets/Feedback-2.Xzm77eSK.png",
     "src": "src/assets/img/Feedback-2.png"
-  },
-  "src/assets/img/Frame10000023902.png": {
-    "file": "_app/immutable/assets/Frame10000023902.aQxjZ7RB.png",
-    "src": "src/assets/img/Frame10000023902.png"
-  },
-  "src/assets/img/Frame10000023903.png": {
-    "file": "_app/immutable/assets/Frame10000023903.kPwAyl2P.png",
-    "src": "src/assets/img/Frame10000023903.png"
   },
   "src/assets/img/Frame1000011749.png": {
     "file": "_app/immutable/assets/Frame1000011749._Q0d6W-N.png",
@@ -116,41 +77,9 @@
     "file": "_app/immutable/assets/Frame1000011826.Ops4a05q.png",
     "src": "src/assets/img/Frame1000011826.png"
   },
-  "src/assets/img/Frame4273209401-3.png": {
-    "file": "_app/immutable/assets/Frame4273209401-3.e1kcXtQ8.png",
-    "src": "src/assets/img/Frame4273209401-3.png"
-  },
   "src/assets/img/Frame4273209401.png": {
     "file": "_app/immutable/assets/Frame4273209401.GZgrRoid.png",
     "src": "src/assets/img/Frame4273209401.png"
-  },
-  "src/assets/img/Group-2.png": {
-    "file": "_app/immutable/assets/Group-2.HQz7FPvI.png",
-    "src": "src/assets/img/Group-2.png"
-  },
-  "src/assets/img/Group-3.png": {
-    "file": "_app/immutable/assets/Group-3.e1bc3BCq.png",
-    "src": "src/assets/img/Group-3.png"
-  },
-  "src/assets/img/Group1000002118.png": {
-    "file": "_app/immutable/assets/Group1000002118.vcvBrAYM.png",
-    "src": "src/assets/img/Group1000002118.png"
-  },
-  "src/assets/img/Group1000011262.png": {
-    "file": "_app/immutable/assets/Group1000011262.GshtsOkG.png",
-    "src": "src/assets/img/Group1000011262.png"
-  },
-  "src/assets/img/Group1000011263.png": {
-    "file": "_app/immutable/assets/Group1000011263.KvUjiAt0.png",
-    "src": "src/assets/img/Group1000011263.png"
-  },
-  "src/assets/img/Group1000011264.png": {
-    "file": "_app/immutable/assets/Group1000011264.Yq45kItE.png",
-    "src": "src/assets/img/Group1000011264.png"
-  },
-  "src/assets/img/Group1000011266.png": {
-    "file": "_app/immutable/assets/Group1000011266.wTKAofL9.png",
-    "src": "src/assets/img/Group1000011266.png"
   },
   "src/assets/img/Group1000011280.png": {
     "file": "_app/immutable/assets/Group1000011280.w-lNAIWo.png",
@@ -159,10 +88,6 @@
   "src/assets/img/Group221.png": {
     "file": "_app/immutable/assets/Group221.jUnLDrF_.png",
     "src": "src/assets/img/Group221.png"
-  },
-  "src/assets/img/Health.png": {
-    "file": "_app/immutable/assets/Health.4Os_6Ebt.png",
-    "src": "src/assets/img/Health.png"
   },
   "src/assets/img/MockUp1.png": {
     "file": "_app/immutable/assets/MockUp1.3GvZTK-T.png",
@@ -176,13 +101,13 @@
     "file": "_app/immutable/assets/Rectangle-6.E3XG0vRq.png",
     "src": "src/assets/img/Rectangle-6.png"
   },
-  "src/assets/img/Rectangle-7.png": {
-    "file": "_app/immutable/assets/Rectangle-7.wat8gWWA.png",
-    "src": "src/assets/img/Rectangle-7.png"
-  },
   "src/assets/img/RoundCube-White-Glossy.png": {
     "file": "_app/immutable/assets/RoundCube-White-Glossy.gUW1Rsu1.png",
     "src": "src/assets/img/RoundCube-White-Glossy.png"
+  },
+  "src/assets/img/Saly-35.png": {
+    "file": "_app/immutable/assets/Saly-35.QK6E22x7.png",
+    "src": "src/assets/img/Saly-35.png"
   },
   "src/assets/img/SuperToroid-White-Glossy.png": {
     "file": "_app/immutable/assets/SuperToroid-White-Glossy.9gzRmAsl.png",
@@ -229,6 +154,9 @@
     "src": "src/fonts/Glancyr-ThinItalic.otf"
   },
   "src/routes/+error.svelte": {
+    "assets": [
+      "_app/immutable/assets/79869.tHTgMaom.png"
+    ],
     "file": "entries/pages/_error.svelte.js",
     "imports": [
       "_ssr.js"
@@ -238,6 +166,7 @@
   },
   "src/routes/+layout.svelte": {
     "assets": [
+      "_app/immutable/assets/wLogo_white.QuBn1yDu.png",
       "_app/immutable/assets/Glancyr-Regular.CRzI-QcJ.otf",
       "_app/immutable/assets/Glancyr-ThinItalic.PMNCY-ws.otf",
       "_app/immutable/assets/Glancyr-Bold.wgybKp5I.otf",
@@ -245,13 +174,11 @@
       "_app/immutable/assets/Group1000011280.w-lNAIWo.png"
     ],
     "css": [
-      "_app/immutable/assets/_layout.8G4_RZmi.css"
+      "_app/immutable/assets/_layout.H6a0VJp9.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
-      "_ssr.js",
-      "_stores.js",
-      "_wLogo_white.js"
+      "_ssr.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
@@ -271,8 +198,7 @@
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [
-      "_ssr.js",
-      "_wLogo_white.js"
+      "_ssr.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
@@ -280,9 +206,7 @@
   "src/routes/blog/+page.svelte": {
     "file": "entries/pages/blog/_page.svelte.js",
     "imports": [
-      "_ssr.js",
-      "_test.js",
-      "_wLogo_white.js"
+      "_ssr.js"
     ],
     "isEntry": true,
     "src": "src/routes/blog/+page.svelte"
@@ -290,10 +214,7 @@
   "src/routes/blog/[slug]/+page.svelte": {
     "file": "entries/pages/blog/_slug_/_page.svelte.js",
     "imports": [
-      "_ssr.js",
-      "_test.js",
-      "_stores.js",
-      "_wLogo_white.js"
+      "_ssr.js"
     ],
     "isEntry": true,
     "src": "src/routes/blog/[slug]/+page.svelte"

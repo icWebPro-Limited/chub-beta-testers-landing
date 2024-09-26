@@ -12,16 +12,6 @@ function run_all(fns) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
 }
-function subscribe(store, ...callbacks) {
-  if (store == null) {
-    for (const callback of callbacks) {
-      callback(void 0);
-    }
-    return noop;
-  }
-  const unsub = store.subscribe(...callbacks);
-  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-}
 function compute_rest_props(props, keys) {
   const rest = {};
   keys = new Set(keys);
@@ -42,12 +32,6 @@ function get_current_component() {
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
-}
-function getContext(key) {
-  return get_current_component().$$.context.get(key);
-}
-function ensure_array_like(array_like_or_iterator) {
-  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
 }
 const _boolean_attributes = (
   /** @type {const} */
@@ -166,14 +150,6 @@ function escape_object(obj) {
   }
   return result;
 }
-function each(items, fn) {
-  items = ensure_array_like(items);
-  let str = "";
-  for (let i = 0; i < items.length; i += 1) {
-    str += fn(items[i], i);
-  }
-  return str;
-}
 const missing_component = {
   $$render: () => ""
 };
@@ -230,9 +206,6 @@ function add_attribute(name, value, boolean) {
   const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
   return ` ${name}${assignment}`;
 }
-function add_classes(classes) {
-  return classes ? ` class="${classes}"` : "";
-}
 function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${escape_attribute_value(style_object[key])};`).join(" ");
 }
@@ -243,11 +216,7 @@ export {
   add_attribute as d,
   escape_object as e,
   compute_rest_props as f,
-  subscribe as g,
-  add_classes as h,
-  escape as i,
-  each as j,
-  getContext as k,
+  escape as g,
   missing_component as m,
   noop as n,
   safe_not_equal as s,

@@ -34,9 +34,9 @@
     import Frame1000011749 from "../assets/img/Frame1000011749.png";
     import Frame1000011750 from "../assets/img/Frame1000011750.png";
     import Frame1000011751 from "../assets/img/Frame1000011751.png";
-    import Slider from "./Slider.svelte";
-    import TextSlide from "./TextSlide.svelte";
-    import Header from "./Header.svelte";
+    // import Header from "./Header.svelte";
+    import Swal from 'sweetalert2';
+    
     function LearnMore(){
         location.href="#downloadApp";
     }
@@ -59,9 +59,26 @@
    function refreshPage(){
     window.location.reload();
    }
-   
+   // Function to detect the platform based on the user agent
+   function getPlatform() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+        return 'ANDROID';
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return 'IOS';
+        }
+
+        return 'DESKTOP'; // Default to Desktop if not Android or iOS
+    }
+  
    let emailaddress = '';
    let fullname = '';
+   let platform = getPlatform();
+   let betaTestConsent = false;
+   let chubCommunicationConsent = false;
    
    // Function to validate email format
     function validateEmail(event) {
@@ -73,6 +90,82 @@
             input.setCustomValidity(''); // Clear the custom message if valid
         }
         input.reportValidity(); // Show validation messages
+    }
+    
+    
+    // Form submission handler
+    async function handleSubmit() {
+        // Form validation check
+        if (!emailaddress || !fullname || !betaTestConsent || !chubCommunicationConsent) {
+            alert("Please complete all required fields.");
+            return;
+        }
+
+        // Payload expected by the server
+        const payload = {
+            email: emailaddress,
+            platform: platform,
+            fullName: fullname,
+            betaTestConsent: true,
+            chubCommunicationConsent: true
+        };
+
+        try {
+            const response = await fetch("https://staging.thechub.app/api/v2/user/add-beta-user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+            
+            console.log(response);
+            if (response.ok) {
+                const data = await response.json();
+                
+                if (data.ok) {
+                    // Handle success
+                    Swal.fire({
+                        title: "Form Submitted",
+                        text: "Thank you for completing the form, we'll get back to you shortly.",
+                        icon: "success",
+                        confirmButtonColor: "#3c0210",
+                    });
+                } else {
+                    // Handle error
+                    Swal.fire({
+                        title: "Submit failed",
+                        text: "An error has occurred. Please try again.",
+                        icon: "error",
+                        footer: '<a href="#">Why do I have this issue?</a>',
+                        confirmButtonText: "Try again",
+                        confirmButtonColor: "#3c0210",
+                    });
+                }
+            
+            } else {
+                // alert("Error submitting the form. Please try again.");
+                Swal.fire({
+                    title: "Submit failed",
+                    text: "Error submitting the form. Please try again.",
+                    icon: "error",
+                    footer: '<a href="#">Why do I have this issue?</a>',
+                    confirmButtonText: "Try again",
+                    confirmButtonColor: "#3c0210",
+                });
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            // alert("An error occurred. Please check your connection.");
+            // Handle error
+            Swal.fire({
+                title: "Server Error",
+                text: "We encountered an error while trying to submit your form. Please try again.",
+                icon: "error",
+                confirmButtonText: "Okay",
+                confirmButtonColor: "#3c0210",
+            });
+        }
     }
     
     let activeSection = null;
@@ -127,20 +220,20 @@
             
             <!-- Form goes here -->
             <div id="waitlist-form" class="flex justify-center">
-                <form id=waitlist-form action="block" method="POST" class="mb-[150px]" on:submit|preventDefault={() => alert('Form submitted!')}>
+                <form id=waitlist-form action="block" method="POST" class="mb-[150px]" on:submit|preventDefault={handleSubmit}>
                     <div class="input-field-div flex flex-row w-[100%] justify-center gap-8">
                         <input type="text"  minlength=3 maxlength="100" bind:value={fullname} name=fullname id=fullname class="waitlist-input-left" placeholder="Enter your Name" on:input="{(e) => e.target.setCustomValidity(fullname ? '' : 'We need a name 🥹.')}" required>
                         
-                        <input type="email" minlength=3 maxlength="100" bind:value={emailaddress} name=emailaddress id=emailaddress class="waitlist-input-right" placeholder="Enter your email address" on:input="{(e) => e.target.setCustomValidity(emailaddress ? '' : 'We need your email address, please 🥹.')}" required>
+                        <input type="email" minlength=3 maxlength="100" bind:value={emailaddress} name=emailaddress id=emailaddress class="waitlist-input-right" placeholder="Enter your email address" on:input={validateEmail} required>
                     </div>
                     
                     <div class="grid justify-center mt-5">
                         <div class="flex flex-row gap-4 leading-4 mt-5">
-                            <input id=checkbox1 class="custom-checkbox" name=checkbox1 type=checkbox required>
-                            <label for="checkbox1" class="text-[20px] max-md:text-[15px]">I consent to receiving communications from CHUB </label>
+                            <input id=checkbox1 class="custom-checkbox" name=betaTestConsent bind:checked={betaTestConsent} type=checkbox required>
+                            <label for="betaTestConsent" class="text-[20px] max-md:text-[15px]">I consent to receiving communications from CHUB </label>
                         </div>
                         <div class="flex flex-row gap-4 leading-4 mt-5">
-                            <input id=checkbox2 class="custom-checkbox" name=checkbox2 type=checkbox required>
+                            <input id=checkbox2 class="custom-checkbox" name=chubCommunicationConsent bind:checked={chubCommunicationConsent} type=checkbox required>
                             <label for="checkbox2" class="text-[20px] max-md:text-[15px]">I would like to be a part of the CHUB testing. </label>
                         </div>
                     </div>
@@ -255,119 +348,58 @@
     </section>
     
     <!-- SECTION FOUR: Multiple Containers--> 
-    <section class="grid gap-2 max-md:hidden my-[70px]">
+    <section class="grid gap-2 max-md:my-[10px] my-[70px]">
         
-        <h1 class="max-md:text-[25px] max-md:leading-[1.2] text-[40px] my-[50px] font-[400] leading-[1] text-center bricolage text-black">Ready to Challenge Yourself? <br>Join CHUB</h1>
+        <h1 class="max-md:text-[25px] max-md:leading-[1.2] text-[40px] max-md:my-[20px] my-[50px] font-[400] leading-[1] text-center bricolage text-black">Ready to Challenge Yourself? <br>Join CHUB</h1>
         
         <div class="flex flex-row flex-wrap gap-3 justify-center">
             <div>
-                <img src={Frame1000011826} alt="" class="rounded-lg h-auto object-cover w-[550px]">
+                <img src={Frame1000011826} alt="" class="rounded-lg h-auto object-cover max-md:w-[22rem] w-[550px]">
             </div>
             <div>
-                <img src={CombinedFaces} alt="" class="rounded-lg h-auto object-cover w-[550px]">
+                <img src={CombinedFaces} alt="" class="rounded-lg h-auto object-cover max-md:w-[22rem] w-[550px]">
             </div>
         </div>
-        <div class="flex flex-row flex-wrap gap-3 justify-center h-[500px]">
-            <div class="flex justify-center w-[550px] gap-4">
+        <div class="flex flex-row flex-wrap gap-3 justify-center max-md:h-auto h-[500px]">
+            <div class="flex justify-center max-md:w-[22rem] w-[550px] gap-4">
                 <div class="bg-[#fdf4fe] h-full w-full rounded-lg flex flex-col">
                     <img src={Design04} alt="Chat Icon" class="mt-[40px] ml-[20px] rounded-lg h-auto w-[200px]">
                     <p class="mt-[20px] ml-[20px] text-black font-[500] text-[26px]">Chub Champions: <br> Real stories, Real <br> Success</p>
-                    <button on:click={goToForm} class="buttons flyer-button my-[14px] ml-[20px] w-[40%] duration-200"> Try CHUB today</button>
+                    <button on:click={goToForm} class="buttons flyer-button my-[14px] ml-[20px] max-md:w-[60%] w-[40%] duration-200"> Try CHUB today</button>
                 </div>
             </div>
-            <div class="flex flex-row gap-1 justify-center w-[550px] h-[500px]">
-                <div class="bg-[#edd9ff] w-[50%] h-full rounded-lg flex flex-col">
+            <div class="flex flex-row gap-1 justify-center max-md:w-[22rem] w-[550px] max-md:h-auto h-[500px]">
+                <div class="bg-[#edd9ff] w-[50%] max-md:h-auto h-full rounded-lg flex flex-col">
                     <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Earn points, <br> gems and <br>badges</p>
                     <img src={Design4} alt="" class="rounded-xl object-contain w-[full]">
                 </div>
-                <div class="flex flex-col gap-4 h-full w-[50%]">
-                    <div class="bg-[#EEEEF0] h-full w-full rounded-lg flex flex-col">
+                <div class="flex flex-col gap-4 max-md:gap-2 max-md:h-auto h-full w-[50%]">
+                    <div class="bg-[#EEEEF0] max-md:h-auto h-full w-full rounded-lg flex flex-col">
                         <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Be part of a <br> closely-knit <br> community</p>
                         <div class="w-full flex-grow flex items-end justify-end">
                             <img src={DiscussionImg} alt="Chat Icon" class="rounded-lg h-auto w-[200px]">
                         </div>
                     </div>
                     <div class="bg-[#FFCADC] h-full w-full rounded-lg flex flex-col">
-                        <p class="mt-[20px] ml-[20px] text-black font-bold text-lg">Cultivate habits, <br> hit milestones</p>
+                        <p class="mt-[20px] max-md:mt-[10px] ml-[20px] text-black font-bold max-md:text-base max-md:pb-5 text-lg">Cultivate habits, <br> hit milestones</p>
                     </div>
                     <!-- <img src={RocketImg} alt="Rocket" class="rounded-lg h-auto"> -->
                 </div>
             </div>
         </div>
-
     </section>
-    
-    <!-- SECTION FIVE: Why Beta test-->
-    <!-- <section id="why-beta" class="max-md:mt-[50px] mt-[150px] w-full grid justify-center h-[600px]">
-        <center class="mx-10 max-md:mx-2">
-            <h4 class="text-[#E84500] max-md:text-[30px] mt-0 max-md:mx-5 max-md:leading-[1.2] md:w-[80vw] text-[40px] leading-[60px] text-center font-[900]">Why Beta test for us?</h4>
-        </center>
-        <div>
-            <TextSlide/>
-        </div>
-    </section> -->
-    
-    <!-- SECTION THREE: Sliders -->
-    <!-- <section id="features" class="max-md:mt-[50px] mt-[50px] w-full grid justify-center">
-        <center class="mx-10 max-md:mx-2">
-            <h4 class="text-[#FC3A0F] dela-gothic-one-regular">Why Challenge Hub</h4>
-            <h4 class="max-md:text-[30px] mt-0 max-md:mx-5 max-md:leading-[1.2] md:w-[80vw] text-[60px] leading-[60px] text-center dela-gothic-one-regular">We heard <span class="text-[#fa1bf1] glancyr">you</span></h4>
-            
-            <p class="text-center mt-1 font-[100] w-[600px]">Goals can feel overwhelming! Let's make it fun together. Playful challenges, a supportive community, and real results await. We’ve got you!</p>
-            
-            <div id=allSlides class="mt-[50px]">
-                <Slider/>
-            </div>
-            
-        </center>
-    </section> -->
-    
-    
 
     <!-- SECTION FIVE: Experience -->
-    <section id="preview" class="max-md:my-[50px] mt-[100px] relative w-full bg-[#fbe7ff] max-[900px]:hidden pt-[80px]">
+    <section id="preview" class="max-md:my-[50px] max-md:mb-0 mt-[100px] w-full bg-[#fbe7ff] max-md:pt-0 max-md:pb-1 pt-[80px]">
         <div class="flex justify-center items-center flex-wrap flex-col">
             <div class="w-[60%]">
                 <h1 class="max-md:text-[25px] max-md:leading-[1.2] text-[40px] mt-[50px] font-[400] leading-[1] text-center bricolage text-black">Experience All The Cool Features <br> Before Anyone Else! <br> Join The Waitlist!</h1>
                 <p class="text-center font-[100] pt-5 text-black">Be the First to Experience the Chub App!</p>
             </div>
             
-            <div class="w-[60%] mt-[100px] flex justify-center">
+            <div class="w-[60%] max-md:mt-[40px] mt-[100px] flex justify-center">
                 <img src={iphoneMeta} alt="" class="w-[600px]">
             </div>
         </div>
-        <!-- <div class="flex w-[75vw] cywwc justify-between px-1 py-0 gap-10 text-white rounded-[40px]">
-            
-            <div class="w-[60%] flex flex-row justify-left items-end relative">
-                <img src={RoundCube} alt="" class="absolute w-[15%] h-[25%]">
-                <img src={DarkPhone1} alt="" class="absolute w-[50%] h-[120%] ml-[70px] z-[3]">
-                <img src={iPhoneStock1} alt="" class="absolute w-[46%] h-[116%] ml-[86px] z-[4]">
-                <img src={DarkPhone2} alt="" class="absolute w-[46%] h-[85%] ml-[350px] z-[1]">
-                <img src={iPhoneStock2} alt="" class="absolute w-[40%] h-[81%] ml-[380px] z-[2]">
-            </div>
-            
-            <div class="w-[40%]">
-                <h1 class="text-[40px] mt-[30%] w-[65%] leading-10 text-white">Create your world with <span class="text-[#F1BB30] glancyr">CHUB</span></h1>
-                
-                <img src={SToroid} alt="" class="absolute w-[7%] mix-blend-lighten top-[28%] ml-[10%] color-[red] rotate-[10deg] z-[1]">
-                
-                <div class="flex mt-5 gap-5">
-                    <a href="https://play.google.com/store/apps/details?id=com.challenge365.app&hl=en&gl=US">
-                        <button class="download-button max-md:h-[50%] max-md:w-[50%] h-[60px] w-[200px] flex gap-2 leading-[1] justify-center items-center font-[300]">
-                            <img class="size-[32px] bg-transparent" src={PlaystoreImg} alt="playstore-logo">
-                            <span class="text-left">Download on <br>Playstore</span>
-                        </button>
-                    </a>
-                    
-                    <a href="https://apps.apple.com/app/chub/id6450390309">
-                        <button class="download-button max-md:h-[50%] max-md:w-[50%] h-[60px] w-[200px] flex gap-2 leading-[1] justify-center items-center font-[300]">
-                            <img class="size-[32px] bg-transparent" src={AppstoreImg} alt="playstore-logo">
-                            <span class="text-left">Download on <br>Appstore</span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            
-        </div> -->
     </section>
 </main>

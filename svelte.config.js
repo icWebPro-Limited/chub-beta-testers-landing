@@ -21,7 +21,7 @@ const config = {
       fallback: 'index.html',  // Fallback for SPA routing
     }),
     paths: {
-      base: '',  // Set this to your subfolder path
+      base: '/v2',  // Set this to your subfolder path
     }
   },
   preprocess: vitePreprocess()

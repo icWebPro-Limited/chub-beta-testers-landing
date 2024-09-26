@@ -118,7 +118,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<title>Chub App | Challenge Hub Mobile App</title>\n		<meta charset="utf-8" />\n		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />\n		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">\n		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">\n		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"><\/script>\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->\n		<meta name="viewport" content="width=1300px" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" class="">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<title>Chub App | Challenge Hub Mobile App</title>\n		<meta charset="utf-8" />\n		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />\n		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">\n		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">\n		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"><\/script>\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<!-- <meta name="viewport" content="width=1300px" /> -->\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" class="">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -190,7 +190,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "17daqmw"
+  version_hash: "bfoak2"
 };
 function get_hooks() {
   return {};
