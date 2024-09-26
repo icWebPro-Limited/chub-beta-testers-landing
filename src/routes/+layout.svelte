@@ -15,13 +15,13 @@
 </script>
 
 <!-- Mobile Menu -->
-<menu>
+<!-- <menu>
    <a href="/" class:nav--active="{$page.url.pathname === '/'}">Home</a>
    <a href="/about-us" class:nav--active="{$page.url.pathname === '/about-us'}">Why Chub?</a>
-   <a href="/suggestions" class:nav--active="{$page.url.pathname === '/suggestions'}">Suggest a feature</a>
-   <!-- <a href="/blog" class:nav--active="{$page.url.pathname.startsWith('/blog')}">Blog</a>
-   <a href="/about" class:nav--active="{$page.url.pathname === '/about'}">About</a> -->
-</menu>
+   <a href="/suggestions" class:nav--active="{$page.url.pathname === '/suggestions'}">Join the waitlist</a>
+   <a href="/blog" class:nav--active="{$page.url.pathname.startsWith('/blog')}">Blog</a>
+   <a href="/about" class:nav--active="{$page.url.pathname === '/about'}">About</a>
+</menu> -->
 
 
 <!-- Back to top -->

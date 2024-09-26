@@ -327,7 +327,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_page();
-  return ` <menu><a href="/"${add_classes(($page.url.pathname === "/" ? "nav--active" : "").trim())} data-svelte-h="svelte-db4yvy">Home</a> <a href="/about-us"${add_classes(($page.url.pathname === "/about-us" ? "nav--active" : "").trim())} data-svelte-h="svelte-md0f5m">Why Chub?</a> <a href="/suggestions"${add_classes(($page.url.pathname === "/suggestions" ? "nav--active" : "").trim())} data-svelte-h="svelte-ur72je">Suggest a feature</a> </menu>  <div class="relative flex flex-col max-w-full mx-auto w-full text-sm sm:text-base"><div${add_attribute(
+  return ` <menu><a href="/"${add_classes(($page.url.pathname === "/" ? "nav--active" : "").trim())} data-svelte-h="svelte-db4yvy">Home</a> <a href="/about-us"${add_classes(($page.url.pathname === "/about-us" ? "nav--active" : "").trim())} data-svelte-h="svelte-md0f5m">Why Chub?</a> <a href="/suggestions"${add_classes(($page.url.pathname === "/suggestions" ? "nav--active" : "").trim())} data-svelte-h="svelte-1b53649">Join the waitlist</a> </menu>  <div class="relative flex flex-col max-w-full mx-auto w-full text-sm sm:text-base"><div${add_attribute(
     "class",
     "fixed bottom-0 w-auto duration-200 flex p-10 z-[10] bg-transparent opacity-0 pointer-events-none",
     0

@@ -174,6 +174,84 @@ h3,
    /* mix-blend-mode: overlay; */
 }
 
+/* Custom Mobile */
+@media screen and (max-width:760px) {
+   .header-new {
+      color: #1E0221;
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+      margin: auto 1px;
+      background: #fff;
+      justify-content: space-between !important;
+   }
+   
+   .nav-links {
+      font-size: 14px;
+   }
+   
+   .buttons {
+      font-size: 14px;
+      height: auto !important;
+      padding: 15px 15px !important;
+   }
+   
+   #waitlist-form {
+      margin: auto 10px;
+   }
+   
+   .input-field-div {
+      display: block !important;
+   }
+   
+   .waitlist-input-left, .waitlist-input-right {
+      /* border-bottom-left-radius: 0px;
+      border-top-left-radius: 0px; */
+      border-radius: 30px !important;
+      font-size: 16px !important;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 10px auto
+   }
+   
+   
+}
+
+/* Hide the default checkbox */
+
+input[type="checkbox"] {
+   scale: 1 !important; 
+   transform: none !important;
+   padding: 8px;
+}
+
+.custom-checkbox {
+   appearance: none;
+   -webkit-appearance: none; /* Safari and WebKit browsers */
+   -moz-appearance: none;    /* Firefox browsers */
+   width: 16px;
+   height: 16px;
+   border: 2px solid #000;  /* Border color */
+   border-radius: 4px;      /* Rounded corners if needed */
+   background-color: #fff;  /* Inner background set to white */
+   cursor: pointer;
+ }
+ 
+ /* Add a checkmark when the checkbox is checked */
+ .custom-checkbox:checked {
+   background-color: none;  /* Keep background white when checked */
+   position: relative;
+ }
+ 
+ .custom-checkbox:checked::after {
+   content: '✔';            /* Checkmark symbol */
+   font-size: 14px;
+   color: #fff;             /* Color of the checkmark */
+   position: absolute;
+   top: 1px;
+   left: 2px;
+ }
+
 .blog-header {
    color: white;
    width: 1640px;

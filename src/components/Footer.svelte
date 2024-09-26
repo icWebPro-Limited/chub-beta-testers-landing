@@ -89,7 +89,7 @@
             
             <!-- Links -->
             <div class="max-md:pb-[50px] pb-[50px] border-b-[1px] border-solid border-b-white">
-                <div class="mt-20 max-md:mt-10 max-md:block flex justify-between">
+                <div class="mt-20 max-md:mt-10 flex justify-between">
                     <div class="w-full">
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
                         <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -100,7 +100,7 @@
                     
                     <!-- Links list-->
                     
-                    <div class="flex items-center justify-end gap-10 w-full max-md:flex-col max-md:mt-10 max-md:gap-[15px]">
+                    <div class="flex items-center justify-end gap-10 w-full max-md:flex-row max-md:gap-[15px]">
                     
                         <a href="https://linkedin.com/thechubapp">
                             <FontAwesomeIcon icon={faLinkedin} size="2x" />
@@ -116,17 +116,17 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex justify-center gap-20 mt-5">
+                <!-- <div class="flex justify-center gap-20 mt-5">
                     <a href="/"> Home </a>
                     <a href="#"> Contact Us </a>
                     <a href="#"> Discord </a>
-                </div>
+                </div> -->
             </div>
             
             <!-- Copyright -->
             <div class="mt-10 max-md:mt-5 pb-10 flex max-md:flex-col justify-between">
                 <div class="text-[12px] w-full">
-                    <p>© 2023 CHUB. All rights reserved.</p>
+                    <p>© 2024 CHUB. All rights reserved.</p>
                 </div>
                 
                 <div class="flex gap-1 justify-end max-md:justify-start text-[12px] w-full">

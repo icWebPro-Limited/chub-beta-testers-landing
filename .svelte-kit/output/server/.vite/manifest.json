@@ -245,7 +245,7 @@
       "_app/immutable/assets/Group1000011280.w-lNAIWo.png"
     ],
     "css": [
-      "_app/immutable/assets/_layout.6lX4q_Iz.css"
+      "_app/immutable/assets/_layout.8G4_RZmi.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -271,7 +271,8 @@
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_wLogo_white.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
